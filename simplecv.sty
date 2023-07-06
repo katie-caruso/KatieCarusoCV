@@ -6,7 +6,7 @@
 \usepackage{titlesec}                       % Title formatting
 \usepackage{subfiles}                       % File importing
 \usepackage{multicol}                       % Multiple columns
-\usepackage[usenames,dvipsnames]{xcolor}    % Coloring
+\usepackage[usenames,x11names,table]{xcolor} % Coloring
 \usepackage{enumitem}                       % List customization
 \usepackage{lastpage}                       % Page numbering
 \usepackage{fancyhdr}                       % Footers
@@ -16,13 +16,17 @@
 \usepackage{blindtext}
 \usepackage{hyperref}
 
-% % Chinese
-% \usepackage{xeCJK}
-% \setCJKmainfont{BabelStone Han}
+%\usepackage{xunicode,xltxtra,url,parskip}   %other packages for formatting
+%\usepackage[big]{layaureo}              %better formatting of the A4 page
+% an alternative to Layaureo can be ** \usepackage{fullpage} **
+%\renewcommand{\arraystretch}{1.5}
+\usepackage{tabularx}
+\usepackage{array}
+\usepackage{longtable}
+\usepackage{booktabs}
 
-% % Cyrillic/Russian
-% \usepackage{hyphenat}
-% \babelfont{rm}{Droid Sans}
+\newcolumntype{R}[1]{>{\raggedleft\let\newline\\\arraybackslash\hspace{0pt}}m{#1}}
+\newcolumntype{L}[1]{>{\raggedright\let\newline\\\arraybackslash\hspace{0pt}}m{#1}}
 
 % Styling
 \pagestyle{fancy}
@@ -94,8 +98,7 @@
     \vspace{-\smallskipamount}]
 
 % Footer
-\fancyfoot[L]{CV | Katie Caruso}
-\fancyfoot[C]{CV | Katie Caruso}
+\fancyfoot[L]{CV | Kathryn Caruso}
 \fancyfoot[R]{\thepage}
 
 % Lists
